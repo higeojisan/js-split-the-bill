@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body {
+    font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+h1, p {
+  text-align: center;
+}
+
+#btn {
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  margin: 30px auto;
+  text-align: center;
+  color: #ffffff;
+  background: rgba(186, 35, 35, 0.9);
+  border-radius: 5px;
+  box-shadow: 1px 3px rgb(147, 9, 9);
+}
