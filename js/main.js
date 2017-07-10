@@ -1,5 +1,6 @@
 (function() {
   var btn = document.getElementById('btn');
+  var reload_btn = document.getElementById('reload_btn');
   var bill_element = document.getElementById('bill');
   var people_element = document.getElementById('people');
   var error = document.getElementById('error');
@@ -13,6 +14,11 @@
     }
     return false;
   }
+
+  // やりなおすボタン
+  reload_btn.addEventListener('click', function() {
+    location.reload();
+  });
 
   btn.addEventListener('click', function() {
     // 金額の取得
