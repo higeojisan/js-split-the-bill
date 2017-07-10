@@ -35,11 +35,18 @@
       return;
     }
     // 割り勘の計算
-    // 割り切れた場合
     var surplus = bill % people;
     var bill_per_person = bill / people;
     if (surplus == 0) {
+      // 割り切れた場合
       result.innerText = 'ちょうど1人あたり' + bill_per_person + '円です';
+    } else {
+      // 割り切れない場合
+      var ceil_bill_per_person = Math.ceil(bill_per_person);
+      var rest = (ceil_bill_per_person * people) - bill;
+      var floor_bill_per_person = Math.floor(bill_per_person);
+      var lack = bill - (floor_bill_per_person * people);
+      result.innerHTML = '1人あたり' + ceil_bill_per_person + '円の場合、' + rest + '円あまります</br>' + '1人あたり' + floor_bill_per_person + '円の場合、' + lack + '円たりません';
     }
   });
 })();
