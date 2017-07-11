@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   var btn = document.getElementById('btn');
   var reload_btn = document.getElementById('reload_btn');
   var bill_element = document.getElementById('bill');
@@ -14,6 +16,14 @@
     }
     return false;
   }
+
+  // フォームクリック時に選択されているようにする
+  bill_element.addEventListener('click', function() {
+    this.select();
+  });
+  people_element.addEventListener('click', function() {
+    this.select();
+  });
 
   // やりなおすボタン
   reload_btn.addEventListener('click', function() {
