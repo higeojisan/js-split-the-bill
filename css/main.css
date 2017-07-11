@@ -16,6 +16,11 @@ h1, p {
   background: rgba(186, 35, 35, 0.9);
   border-radius: 5px;
   box-shadow: 1px 3px rgb(147, 9, 9);
+  cursor: pointer;
+}
+
+#btn:hover {
+  opacity: 0.8;
 }
 
 #reload_btn {
@@ -28,10 +33,24 @@ h1, p {
   background: rgb(35, 224, 105);
   border-radius: 5px;
   box-shadow: 1px 3px rgb(20, 143, 17);
+  cursor: pointer;
+}
+
+#reload_btn:hover {
+  opacity: 0.8;
 }
 
 #result {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  border-radius: 3px;
 }
