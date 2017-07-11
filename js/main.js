@@ -33,17 +33,26 @@
   btn.addEventListener('click', function() {
     // 金額の取得
     var bill = bill_element.value;
-    var bill_error_occured = isError(bill);
+    //var bill_error_occured = isError(bill);
     // 人数の取得
     var people = people_element.value;
-    var people_error_occured = isError(people);
-    // エラー表示
+    //var people_error_occured = isError(people);
+    // エラー処理
+    if (!bill.match(/^[1-9][0-9]*$/) || !people.match(/^[1-9][0-9]*/)) {
+      error.innerText = '金額・人数は半角数字で入力してください';
+      error.style.color = 'crimson';
+      error.style.textAlign = 'center';
+      return;
+    }
+
+    /*
     if ((bill_error_occured === true) || (people_error_occured === true)) {
       error.innerText = '金額・人数は半角数字で入力してください';
       error.style.color = 'crimson';
       error.style.textAlign = 'center';
       return;
     }
+    */
     // 割り勘の計算
     var surplus = bill % people;
     var bill_per_person = bill / people;
